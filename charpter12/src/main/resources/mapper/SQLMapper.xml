@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间mapper,如果有多个mapper文件，这个必须唯一 -->
+<mapper namespace="com.tester.model">
+
+    <!-- 登录接口sql -->
+    <select id="loginCase" parameterType="Integer" resultType="com.course.module.Login">
+        select * from loginCase where id=#{id};
+    </select>
+
+    <!-- 添加用户sql -->
+    <select id="addUserCase" parameterType="Integer" resultType="com.course.module.AddUser">
+        select * from addUserCase where id=#{id};
+    </select>
+
+    <!-- 获取用户信息接口sql -->
+    <select id="getUserInfoCase" parameterType="Integer" resultType="com.course.module.GetUserInfoById">
+        select * from getUserInfoCase where id=#{id};
+    </select>
+
+    <!-- 获取用户列表信息接口sql -->
+    <select id="getUserInfoListCase" parameterType="Integer" resultType="com.course.module.GetUserList">
+        select * from getUserList where id=#{id};
+    </select>
+
+    <!-- 更新用户信息接口sql-->
+    <select id="updateUserInfoCase" parameterType="Integer" resultType="com.course.module.UpdateUserInfo">
+        select * from updateUserInfoCase where id=#{id};
+    </select>
+
+    <!-- 获取用户信息接口 -->
+    <select id="getUserInfo" parameterType="com.course.module.GetUserInfoById" resultType="com.course.module.User">
+        select * from user where id=#{id};
+    </select>
+    <select id="updateLaterUserInfo" parameterType="com.course.module.GetUserInfoById" resultType="com.course.module.User">
+        select * from user where id=#{userId};
+    </select>
+
+
+    <select id="getUserInfoList" parameterType="com.course.module.GetUserList" resultType="com.course.module.User">
+        select * from user
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="id != null and id>0">
+                AND id=#{id}
+            </if>
+            <if test="userName != null and userName.length()>0">
+                AND userName=#{userName}
+            </if>
+            <if test="age != null and age.length()>0">
+                AND age=#{age}
+            </if>
+            <if test="sex != null and sex.length()>0">
+                AND sex=#{sex}
+            </if>
+            <if test="permission != null and permission.length()>0">
+                AND permission=#{permission}
+            </if>
+        </trim>
+        ;
+    </select>
+
+    <select id="login" parameterType="com.course.module.Login" resultType="com.course.module.User">
+        select * from user where userName=#{userName} and password=#{password};
+    </select>
+
+    <insert id="addUser" parameterType="com.course.module.AddUser">
+        insert into user(id,userName,password,age,sex,permission,isDelete)
+        value (#{id},#{userName},#{password},#{age}),#{sex},#{permission});
+    </insert>
+
+    <select id="updateUserInfo" parameterType="com.course.module.UpdateUserInfo" resultType="com.course.module.User">
+        select * from user where id=#{userId};
+    </select>
+</mapper>
