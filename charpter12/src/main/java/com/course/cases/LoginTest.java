@@ -68,7 +68,7 @@ public class LoginTest {
         TestConfig.cookieStore = TestConfig.client.getCookieStore();
 
         String result = EntityUtils.toString(response.getEntity(),"utf-8");
-
+        System.out.println("登录失败返回的值" + result);
         return result;
     }
 

@@ -20,7 +20,7 @@ public class AddUserTest {
     @Test(dependsOnGroups = "loginTrue",description = "添加用户接口测试")
     public void addUser() throws IOException, InterruptedException {
         SqlSession session = DatabaseUtil.getSqlSession();
-        AddUser addUser = session.selectOne("addUserCase",8);
+        AddUser addUser = session.selectOne("addUserCase",9);
         System.out.println(addUser.toString());
         System.out.println(TestConfig.addUserUrl);
 
