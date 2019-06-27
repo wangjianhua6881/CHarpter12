@@ -44,7 +44,7 @@ public class GetUserInfoTest {
 
         HttpResponse response = TestConfig.client.execute(post);
         String result = EntityUtils.toString(response.getEntity(),"utf-8");
-        System.out.println("我的添加用户case返回的内容：" + result);
+        System.out.println("请求接口返回的内容：" + result);
         return result;
     }
 
