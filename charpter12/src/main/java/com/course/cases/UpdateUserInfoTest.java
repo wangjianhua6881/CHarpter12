@@ -32,7 +32,7 @@ public class UpdateUserInfoTest {
 
     }
 
-    @Test
+    @Test(dependsOnMethods = {"updateUserInfo"})
     public void assertUpdateLaterUserInfo() throws IOException {
         SqlSession session = DatabaseUtil.getSqlSession();
         UpdateUserInfo updateUserInfo = session.selectOne("updateUserInfoCase",1);
