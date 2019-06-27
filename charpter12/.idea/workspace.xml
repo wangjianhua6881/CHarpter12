@@ -37,20 +37,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GetUserInfoTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GetUserInfoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/course/cases/GetUserInfoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+            <state relative-caret-position="241">
+              <caret line="50" column="54" lean-forward="true" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetUserListInfoTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GetUserListInfoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/course/cases/GetUserListInfoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="236">
+              <caret line="92" column="52" lean-forward="true" selection-start-line="92" selection-start-column="52" selection-end-line="92" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,8 +185,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/databaseConfig.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/cases/UpdateUserInfoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/course/cases/GetUserListInfoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/course/cases/GetUserInfoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/course/cases/GetUserListInfoTest.java" />
       </list>
     </option>
   </component>
@@ -229,8 +229,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="90" />
-    <option name="y" value="325" />
+    <option name="x" value="7" />
+    <option name="y" value="122" />
     <option name="width" value="1722" />
     <option name="height" value="905" />
   </component>
@@ -534,14 +534,11 @@
       <workItem from="1561368122988" duration="547000" />
       <workItem from="1561444406440" duration="126000" />
       <workItem from="1561446632790" duration="7867000" />
-      <workItem from="1561618209430" duration="5965000" />
+      <workItem from="1561618209430" duration="6623000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Users_wangjianhua_Downloads_charpter12_src_main_resources_testng_xml - 2019.06.25 at 17h 48m 46s.xml">
-      <configuration name="/Users/wangjianhua/Downloads/charpter12/src/main/resources/testng.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="_Users_wangjianhua_Downloads_charpter12_src_main_resources_testng_xml - 2019.06.25 at 17h 54m 06s.xml">
       <configuration name="/Users/wangjianhua/Downloads/charpter12/src/main/resources/testng.xml" configurationId="TestNG" />
     </history-entry>
@@ -569,12 +566,15 @@
     <history-entry file="_Users_wangjianhua_Downloads_charpter12_src_main_resources_testng_xml - 2019.06.27 at 17h 32m 58s.xml">
       <configuration name="/Users/wangjianhua/Downloads/charpter12/src/main/resources/testng.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="_Users_wangjianhua_Downloads_charpter12_src_main_resources_testng_xml - 2019.06.27 at 17h 43m 35s.xml">
+      <configuration name="/Users/wangjianhua/Downloads/charpter12/src/main/resources/testng.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85372000" />
+    <option name="totallyTimeSpent" value="86030000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="81" y="100" width="1722" height="905" extended-state="0" />
+    <frame x="7" y="122" width="1722" height="905" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -946,20 +946,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/cases/GetUserListInfoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/cases/GetUserInfoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="241">
+          <caret line="50" column="54" lean-forward="true" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/cases/GetUserInfoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/course/cases/GetUserListInfoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        <state relative-caret-position="236">
+          <caret line="92" column="52" lean-forward="true" selection-start-line="92" selection-start-column="52" selection-end-line="92" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
