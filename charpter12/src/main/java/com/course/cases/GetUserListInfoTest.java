@@ -39,21 +39,17 @@ public class GetUserListInfoTest {
         for (User u:userList) {
             System.out.println("获取到的用户信息：" + u);
         }
-        //将预期转换为JSONArray
-        JSONArray jsonArrayExpected = new JSONArray(userList);
-        JSONArray jsonArrayResult = new JSONArray(requestResult);
 
-        //将预期&实际结果转换为字符串类型
-        String assertExpected = String.valueOf(jsonArrayExpected);
-        String assertResult = String.valueOf(jsonArrayResult);
+        JSONArray jsonArrayResult = new JSONArray(requestResult);
+        JSONArray jsonArrayExpected = new JSONArray(userList);
+        System.out.println("预期结果：" + jsonArrayExpected.toString());
+        System.out.println("实际结果：" + jsonArrayResult.toString());
 
         //对比预期结果与实际结果的字符串值
-        try{
-            if (assertExpected.equals(assertResult)){
-                System.out.println("用户列表信息对比成功！");
-            }
-        }catch (AssertionError error){
-            error.printStackTrace();
+        if (jsonArrayExpected.toString().equals(jsonArrayResult.toString())){
+            System.out.println("用户列表信息接口对比成功！");
+        }else {
+            throw new AssertionError();
         }
 
 

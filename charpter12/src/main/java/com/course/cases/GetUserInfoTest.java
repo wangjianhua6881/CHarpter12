@@ -9,11 +9,14 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.session.SqlSession;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GetUserInfoTest {
 
@@ -24,24 +27,25 @@ public class GetUserInfoTest {
         System.out.println("获取用户信息用例数据" + getUserInfo.toString());
         System.out.println("获取用户信息路由：" + TestConfig.getUserInfoUrl);
 
-        //将查询到的预期结果转换为JSONObject类型
+        List<User> userList = new ArrayList<User>();
+
+        //将查询到的预期结果转换为JSONOArray类型
         User user = session.selectOne("getUserInfo",getUserInfo);
-        JSONObject jsonExpected = new JSONObject(user);
+        userList.add(user);
+        JSONArray jsonArrayExpected = new JSONArray(userList);
+        System.out.println("预期结果：" + jsonArrayExpected.toString());
+
         //将接口返回的结果转换为JSONObject类型
         String result = getResultJson(getUserInfo,TestConfig.getUserInfoUrl);
-        JSONObject jsonResult = new JSONObject(result);
+        JSONArray jsonArrayResult = new JSONArray(result);
+        System.out.println("实际结果：" + jsonArrayResult.toString());
 
-        //将jsonObject转换为字符串类型
-        String assertExpected = String.valueOf(jsonExpected);
-        String assertResult = String.valueOf(jsonResult);
 
         //对比获取到的结果
-        try{
-            if (assertExpected.equals(assertResult)){
-                System.out.println("用户信息对比成功！");
-            }
-        }catch (AssertionError error){
-            error.printStackTrace();
+        if (jsonArrayExpected.toString().equals(jsonArrayResult.toString())){
+            System.out.println("用户信息接口对比成功！");
+        }else {
+            throw new AssertionError();
         }
 
     }
