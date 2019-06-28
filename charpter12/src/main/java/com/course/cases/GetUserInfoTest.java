@@ -25,11 +25,14 @@ public class GetUserInfoTest {
         System.out.println("获取用户信息路由：" + TestConfig.getUserInfoUrl);
 
         User user = session.selectOne("getUserInfo",getUserInfo);
+        JSONObject jsonExpected = new JSONObject(user);
 
         String result = getResultJson(getUserInfo,TestConfig.getUserInfoUrl);
-        JSONObject resultJson = new JSONObject(result);
-        User user1 = getUserObject(resultJson);
-        Assert.assertEquals(user,user1);
+        JSONObject jsonResult = new JSONObject(result);
+
+        String assertExpected = String.valueOf(jsonExpected);
+        String assertResult = String.valueOf(jsonResult);
+        Assert.assertEquals(assertExpected,assertResult);
 
     }
 
@@ -48,17 +51,18 @@ public class GetUserInfoTest {
         return result;
     }
 
-    private User getUserObject(JSONObject jsonObject){
-        User user = new User();
-        user.setId(jsonObject.getInt("id"));
-        user.setUserName(jsonObject.getString("userName"));
-        user.setPassword(jsonObject.getString("password"));
-        user.setAge(jsonObject.getString("age"));
-        user.setSex(jsonObject.getString("sex"));
-        user.setIsDelete(jsonObject.getString("isDelete"));
-        user.setPermission(jsonObject.getString("permission"));
-        return user;
-    }
+//    @Test(dependsOnMethods = {"getUserInfo"})
+//    private User getUserObject(JSONObject jsonObject){
+//        User user = new User();
+//        user.setId(jsonObject.getInt("id"));
+//        user.setUserName(jsonObject.getString("userName"));
+//        user.setPassword(jsonObject.getString("password"));
+//        user.setAge(jsonObject.getString("age"));
+//        user.setSex(jsonObject.getString("sex"));
+//        user.setIsDelete(jsonObject.getString("isDelete"));
+//        user.setPermission(jsonObject.getString("permission"));
+//        return user;
+//    }
 
 
 }
