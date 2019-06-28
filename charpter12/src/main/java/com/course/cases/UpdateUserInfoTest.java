@@ -23,8 +23,8 @@ public class UpdateUserInfoTest {
     public void updateUserInfo() throws IOException, InterruptedException {
         SqlSession session = DatabaseUtil.getSqlSession();
         UpdateUserInfo updateUserInfo = session.selectOne("updateUserInfoCase",1);
-        System.out.println(updateUserInfo);
-        System.out.println(TestConfig.updateUserInfoUrl);
+        System.out.println("更新用户的测试用例数据：" + updateUserInfo);
+        System.out.println("更新用户的接口路由：" + TestConfig.updateUserInfoUrl);
         user = session.selectOne("updateUserInfo",updateUserInfo);
         int result = getResult(updateUserInfo,TestConfig.updateUserInfoUrl);
         Thread.sleep(3000);

@@ -21,8 +21,8 @@ public class GetUserInfoTest {
     public void getUserInfo() throws IOException {
         SqlSession session = DatabaseUtil.getSqlSession();
         GetUserInfoById getUserInfo = session.selectOne("getUserInfoCase",1);
-        System.out.println(getUserInfo.toString());
-        System.out.println(TestConfig.getUserInfoUrl);
+        System.out.println("获取用户信息用例数据" + getUserInfo.toString());
+        System.out.println("获取用户信息路由：" + TestConfig.getUserInfoUrl);
 
         User user = session.selectOne("getUserInfo",getUserInfo);
 

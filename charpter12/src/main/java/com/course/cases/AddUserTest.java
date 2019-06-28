@@ -21,8 +21,8 @@ public class AddUserTest {
     public void addUser() throws IOException, InterruptedException {
         SqlSession session = DatabaseUtil.getSqlSession();
         AddUser addUser = session.selectOne("addUserCase",9);
-        System.out.println(addUser.toString());
-        System.out.println(TestConfig.addUserUrl);
+        System.out.println("添加用户测试用例数据：" + addUser.toString());
+        System.out.println("添加用户路由：" + TestConfig.addUserUrl);
 
         String result = getResult(addUser,TestConfig.addUserUrl);
         Thread.sleep(3000);

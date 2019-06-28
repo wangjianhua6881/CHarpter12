@@ -29,8 +29,8 @@ public class GetUserListInfoTest {
         GetUserList getUserList = session.selectOne("getUserInfoListCase",1);
 
         //输出查询到的结果和将要访问的路由
-        System.out.println(getUserList.toString());
-        System.out.println(TestConfig.getUserListUrl);
+        System.out.println("获取用户列表测试用例数据" + getUserList.toString());
+        System.out.println("获取用户列表路由：" + TestConfig.getUserListUrl);
 
         //实际结果（获取请求中接口返回的数据 参数 用例数据&接口路由地址）
         JSONArray getArray = getJSONArray(getUserList,TestConfig.getUserListUrl);
