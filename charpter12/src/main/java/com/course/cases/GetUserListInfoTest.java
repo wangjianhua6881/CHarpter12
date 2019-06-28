@@ -11,7 +11,6 @@ import org.apache.http.util.EntityUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -44,11 +43,18 @@ public class GetUserListInfoTest {
         JSONArray jsonArrayExpected = new JSONArray(userList);
         JSONArray jsonArrayResult = new JSONArray(requestResult);
 
+        //将预期&实际结果转换为字符串类型
         String assertExpected = String.valueOf(jsonArrayExpected);
         String assertResult = String.valueOf(jsonArrayResult);
 
         //对比预期结果与实际结果的字符串值
-        Assert.assertEquals(assertExpected,assertResult);
+        try{
+            if (assertExpected.equals(assertResult)){
+                System.out.println("用户列表信息对比成功！");
+            }
+        }catch (AssertionError error){
+            error.printStackTrace();
+        }
 
 
 //        System.out.println("sessionList数据" + sessionList);
