@@ -19,11 +19,11 @@
                     <include name="getUserInfo"/>
                 </method>
             </class>
-            <class name="com.course.cases.GetUserListInfoTest">
-                <method>
-                    <include name="getUserListInfo"/>
-                </method>
-            </class>
+            <!--<class name="com.course.cases.GetUserListInfoTest">-->
+                <!--<method>-->
+                    <!--<include name="getUserListInfo"/>-->
+                <!--</method>-->
+            <!--</class>-->
             <class name="com.course.cases.UpdateUserInfoTest">
                 <method>
                     <include name="updateUserInfo"/>
